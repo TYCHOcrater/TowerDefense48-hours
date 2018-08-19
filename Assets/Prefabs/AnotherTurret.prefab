@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 4413977968678660}
   - component: {fileID: 114858169218033858}
   m_Layer: 0
-  m_Name: Turret
+  m_Name: AnotherTurret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -58,6 +58,21 @@ GameObject:
   - component: {fileID: 64011149848165632}
   m_Layer: 0
   m_Name: Base
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1935453952518830
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4743344447515848}
+  m_Layer: 0
+  m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -89,6 +104,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4608135199592502}
+  - {fileID: 4743344447515848}
   m_Father: {fileID: 4413977968678660}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
@@ -98,7 +114,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1369087614632500}
-  m_LocalRotation: {x: -0, y: -0.6644684, z: -0, w: 0.7473164}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 14.29, y: 0.5, z: 31.29}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -106,7 +122,7 @@ Transform:
   - {fileID: 4763063443512652}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -83.283005, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!4 &4608135199592502
 Transform:
   m_ObjectHideFlags: 1
@@ -119,6 +135,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4326460727037204}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4743344447515848
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1935453952518830}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.616, z: 2.551}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4326460727037204}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4763063443512652
 Transform:
@@ -253,6 +282,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 858fa798a03e17f41ae5610739ed65dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 15
+  range: 30
+  fireRate: 0.5
   partToRotate: {fileID: 4326460727037204}
+  turnSpeed: 10
   enemyTag: Enemy
+  bulletPrefab: {fileID: 1089918674960318, guid: c87f83e57304a444fa379dac1bfbb4b4,
+    type: 2}
+  firePoint: {fileID: 4743344447515848}
