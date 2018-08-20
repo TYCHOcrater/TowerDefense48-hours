@@ -92,6 +92,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28af828c6c35fbf4e9c8c4423bd3acb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 70
+  speed: 40
+  damage: 50
+  explostonRadius: 0
   impactEffect: {fileID: 1485605412468242, guid: a14c6b997661f3845aabe0fc2b94d01a,
     type: 2}
