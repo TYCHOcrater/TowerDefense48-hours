@@ -17,43 +17,49 @@ public class BuildManager : MonoBehaviour {
         instance = this;
     }
 
-    public GameObject standartTurretPrefab;
-
-    public GameObject missileLauncherPrefab;
-
     public GameObject buildEffect;
+    public GameObject sellEffect;
 
     private TurretBlueprint turretToBuild;
+    private Node selectedNode;
+
+    public NodeUI nodeUI;
 
     public bool CanBuild { get { return turretToBuild != null; } }
     public bool HasMoney { get { return PlayerStats.Money >= turretToBuild.cost; } }
 
 
-    public void BuildTurretOn (Node node)
+   
+
+    public void SelectNode (Node node)
     {
-        if (PlayerStats.Money < turretToBuild.cost)
+        if (selectedNode == node)
         {
-            Debug.Log("Not enough money to build that!");
+            DeselectedNode();
             return;
         }
 
-        PlayerStats.Money -= turretToBuild.cost;
+        selectedNode = node;
+        turretToBuild = null;
 
+        nodeUI.SetTarget(node);
+    }
 
-        GameObject turret = (GameObject)Instantiate(turretToBuild.prefab, node.GetBuildPosition(), Quaternion.identity);
-
-        node.turret = turret;
-
-        GameObject effect = (GameObject)Instantiate(buildEffect, node.GetBuildPosition(), Quaternion.identity);
-        Destroy(effect, 5f);
-
-        Debug.Log("Turret build! Money left: " + PlayerStats.Money);
-
+    public void DeselectedNode()
+    {
+        selectedNode = null;
+        nodeUI.Hide();
     }
 
     public void SelectTurretToBuild (TurretBlueprint turret)
     {
         turretToBuild = turret;
+        DeselectedNode();
+    }
+
+    public TurretBlueprint GetTurretToBuild ()
+    {
+        return turretToBuild;
     }
 
 }

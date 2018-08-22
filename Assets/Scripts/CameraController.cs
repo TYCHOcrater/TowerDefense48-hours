@@ -2,7 +2,7 @@
 
 public class CameraController : MonoBehaviour {
 
-    private bool doMovement = true;
+    
 
     public float panSpeed = 30f;
     public float penBorderThickness = 10f;
@@ -14,25 +14,25 @@ public class CameraController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if (Input.GetKeyDown(KeyCode.Escape))
-            doMovement = !doMovement;
-
-        if (!doMovement)
+        if (GameManager.GameIsOver)
+        {
+            this.enabled = false;
             return;
+        }
 
-        if (Input.GetKey("w") || Input.mousePosition.y >= Screen.height - penBorderThickness)
+        if (Input.GetKey("s") || Input.mousePosition.y >= Screen.height - penBorderThickness)
         {
             transform.Translate(Vector3.forward * panSpeed * Time.deltaTime, Space.World);
         }
-        if (Input.GetKey("s") || Input.mousePosition.y <= penBorderThickness)
+        if (Input.GetKey("w") || Input.mousePosition.y <= penBorderThickness)
         {
             transform.Translate(Vector3.back * panSpeed * Time.deltaTime, Space.World);
         }
-        if (Input.GetKey("d") || Input.mousePosition.x >= Screen.width - penBorderThickness)
+        if (Input.GetKey("a") || Input.mousePosition.x >= Screen.width - penBorderThickness)
         {
             transform.Translate(Vector3.right * panSpeed * Time.deltaTime, Space.World);
         }
-        if (Input.GetKey("a") || Input.mousePosition.x <= penBorderThickness)
+        if (Input.GetKey("d") || Input.mousePosition.x <= penBorderThickness)
         {
             transform.Translate(Vector3.left * panSpeed * Time.deltaTime, Space.World);
         }

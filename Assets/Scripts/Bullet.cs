@@ -79,8 +79,6 @@ public class Bullet : MonoBehaviour {
 
         e.TakeDamage(damage);
 
-        Destroy(enemy.gameObject);
-
     }
 
     void OnDrawGizmosSelected ()
