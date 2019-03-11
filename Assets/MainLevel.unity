@@ -4375,7 +4375,7 @@ Prefab:
     - target: {fileID: 224570569507402232, guid: a60c6f971cb37764497623b005fb1378,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 296
+      value: 484.5
       objectReference: {fileID: 0}
     - target: {fileID: 224570569507402232, guid: a60c6f971cb37764497623b005fb1378,
         type: 2}
@@ -32069,7 +32069,7 @@ Prefab:
     - target: {fileID: 224570569507402232, guid: a60c6f971cb37764497623b005fb1378,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 391
+      value: 579.5
       objectReference: {fileID: 0}
     - target: {fileID: 224570569507402232, guid: a60c6f971cb37764497623b005fb1378,
         type: 2}
@@ -32985,7 +32985,7 @@ Prefab:
     - target: {fileID: 224727877843847486, guid: 61a7d3204e7be454385b8755cbb38817,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 201
+      value: 389.5
       objectReference: {fileID: 0}
     - target: {fileID: 224727877843847486, guid: 61a7d3204e7be454385b8755cbb38817,
         type: 2}
@@ -36762,46 +36762,46 @@ MonoBehaviour:
     count: 1
     rate: 2
   - enemy: {fileID: 1726901435546132, guid: 8c4a2b8755b511b41876979dc232c95a, type: 2}
-    count: 2
+    count: 22
     rate: 2
   - enemy: {fileID: 1726901435546132, guid: 8c4a2b8755b511b41876979dc232c95a, type: 2}
-    count: 5
+    count: 55
     rate: 2
   - enemy: {fileID: 1726901435546132, guid: 2caf03dc2d3f2cd48b5d51a35797b7f0, type: 2}
-    count: 3
+    count: 44
     rate: 1
   - enemy: {fileID: 1726901435546132, guid: 86918ffeb8ccc2143bf97f235b8653af, type: 2}
-    count: 15
-    rate: 3
-  - enemy: {fileID: 1726901435546132, guid: 8c4a2b8755b511b41876979dc232c95a, type: 2}
-    count: 12
-    rate: 3
-  - enemy: {fileID: 1726901435546132, guid: 2caf03dc2d3f2cd48b5d51a35797b7f0, type: 2}
-    count: 1
-    rate: 3
-  - enemy: {fileID: 1726901435546132, guid: 86918ffeb8ccc2143bf97f235b8653af, type: 2}
-    count: 25
+    count: 55
     rate: 3
   - enemy: {fileID: 1726901435546132, guid: 8c4a2b8755b511b41876979dc232c95a, type: 2}
     count: 30
     rate: 3
   - enemy: {fileID: 1726901435546132, guid: 2caf03dc2d3f2cd48b5d51a35797b7f0, type: 2}
-    count: 15
-    rate: 2
+    count: 40
+    rate: 3
   - enemy: {fileID: 1726901435546132, guid: 86918ffeb8ccc2143bf97f235b8653af, type: 2}
     count: 50
     rate: 3
   - enemy: {fileID: 1726901435546132, guid: 8c4a2b8755b511b41876979dc232c95a, type: 2}
-    count: 40
+    count: 150
     rate: 3
   - enemy: {fileID: 1726901435546132, guid: 2caf03dc2d3f2cd48b5d51a35797b7f0, type: 2}
-    count: 5
-    rate: 3
+    count: 60
+    rate: 2
   - enemy: {fileID: 1726901435546132, guid: 86918ffeb8ccc2143bf97f235b8653af, type: 2}
-    count: 100
+    count: 90
     rate: 3
+  - enemy: {fileID: 1726901435546132, guid: 8c4a2b8755b511b41876979dc232c95a, type: 2}
+    count: 400
+    rate: 8
   - enemy: {fileID: 1726901435546132, guid: 2caf03dc2d3f2cd48b5d51a35797b7f0, type: 2}
-    count: 50
+    count: 300
+    rate: 10
+  - enemy: {fileID: 1726901435546132, guid: 86918ffeb8ccc2143bf97f235b8653af, type: 2}
+    count: 320
+    rate: 5
+  - enemy: {fileID: 1726901435546132, guid: 2caf03dc2d3f2cd48b5d51a35797b7f0, type: 2}
+    count: 1000
     rate: 3
   spawnPoint: {fileID: 1323876717}
   timeBetweenWaves: 2
@@ -36846,7 +36846,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startMoney: 400
-  startLives: 1
+  startLives: 15
 --- !u!114 &2118044086
 MonoBehaviour:
   m_ObjectHideFlags: 0
